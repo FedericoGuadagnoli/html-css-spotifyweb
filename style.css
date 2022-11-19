@@ -33,57 +33,87 @@ body {
 
 /* SIDEBAR */
 .sidebar {
-    width: 40px;
+    width: 50px;
     height: 100vh;
-    background-color: yellow;
+    background-color: black;
     border: 2px dashed blue;
     position: fixed;
     left: 0;
     top: 0;
     z-index: 1;
-    padding-bottom: 103px;
-}
-
-.sidebar span, .sidebar h1, .navbar-playlist {
-    display: none;
-}
-
-.sidebar-header {
-    font-size: 1.5rem;
-    text-align: center;
+    padding-bottom: 80px;
+    color: white;
 }
 
 .flex-direction {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     height: 100%;
-    font-size: 1.2rem;
 }
 
-.sidebar ul {
-    list-style-type: none;
+.navbar.top{
+    flex-basis: 24%;
 }
 
-.sidebar li {
-    padding: 5px 0;
+.navbar.bottom {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-basis: 75%;
 }
 
-.navbar-user li:first-child {
-    font-size: 0.6rem;
+.navbar img {
+    width: 1.8rem;
+}
+
+.navbar .logo-small {
+    width: 2rem;
+    padding: 2px 0;
+}
+
+.logo-big {
+    display: none;
+    width: 2rem;
+}
+
+.navbar > * {
     text-align: center;
 }
 
-.navbar-user li:nth-child(2) {
+* ul {
+    list-style-type: none;
+}
+
+.navbar-menù ul li {
+    padding: 2px 0;
+}
+
+.navbar-playlist, .navbar * span {
     display: none;
 }
 
+.line {
+    border: 1px solid grey;
+    margin: 5px 0;
+    display: none;
+}
+
+.download img {
+    width: 1rem;
+}
+.profile {
+    background-color: grey;
+    border-radius: 50%;
+    width: 1.8rem;
+    height: 1.8rem;
+}
 /* MAIN */
 main {
     height: 100vh;
     width: 100vw;
-    padding-left: 35px;
+    padding-left: 45px;
     background-color: red;
 }
 
@@ -194,62 +224,67 @@ footer {
     padding: 10px;
 }
 
-/* SIDEBAR HEADER */
-.sidebar-header {
-    text-align: initial;
-    font-size: 1rem;
+.flex-direction {
+    align-items: flex-start;
+}
+
+.navbar > * {
+    text-align: left;
+}
+
+.navbar-spotify {
     height: 60px;
 }
 
-.spotify {
-    font-size: 1.5rem;
+.navbar .logo-small {
+    display: none;
 }
 
-.flex-direction {
-    justify-content: flex-start;
-    align-items: flex-start;
-    font-size: 0.8rem;
+.navbar .logo-big {
+    display: block;
+    width: 8rem;
 }
 
-.sidebar span, .sidebar h1, .navbar-playlist {
+.navbar.bottom {
+    flex-basis: 63%;
+    justify-content: space-between;
+}
+.navbar-playlist, .navbar * span {
     display: inline-block;
 }
 
-/* NAVBAR PLAYLIST */
-.navbar-playlist {
-    flex-basis: 55%;
-    padding-top: 15px;
+.navbar-playlist ul li {
+    padding: 5px 0;
 }
 
-.navbar-playlist h3 {
-    font-size: 1rem;
+.navbar * span {
+    font-size: 0.7rem;
 }
 
-.fa-square-plus, .fa-spotify {
-    font-size: 2rem;
+.navbar * li {
+    line-height: 100%;
 }
 
-.fa-square-plus {
-    line-height: 42px;
-}
-
-.fa-square-plus, .create-playlist {
+.navbar li img, .fa-square-plus, span {
     vertical-align: middle;
 }
 
-/* NAVBAR USER */
-.navbar-user li:first-child {
-    text-align: start;
+.fa-square-plus {
+    font-size: 2rem;
+    padding-top: 5px;
 }
 
-.navbar-user li:nth-child(2) {
-    display: block;
+.download, .user-name {
+    line-height: 100%;
+}
+
+.navbar-user img {
+    vertical-align: middle;
 }
 
 .line {
-    border-bottom: 2px solid black;
+    display: block;
 }
-
 
 /* MAIN */
 main {
@@ -273,8 +308,7 @@ main {
 
 
 @media screen and (min-width: 768px) {
-    /* SIDEBAR LEFT */
-  
+
     /* MAIN */
     /* MENU' */
     #menu ul {
